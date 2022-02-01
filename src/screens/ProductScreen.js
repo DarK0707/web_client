@@ -10,9 +10,9 @@ import { listProductDetails, createProductReview } from '../actions/productActio
 import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/productConstants'
 
 const ProductScreen = ({ history, match }) => {
-    // Quantity part of component level state
+   
     const [qty, setQty] = useState(1)
-    // add a new review
+    
     const [rating, setRating] = useState(0)
     const [comment, setComment] = useState('')
 
@@ -35,14 +35,14 @@ const ProductScreen = ({ history, match }) => {
             dispatch({type: PRODUCT_CREATE_REVIEW_RESET})
         }
         dispatch(listProductDetails(match.params.id))
-    }, [dispatch, match, successProductReview]) // zavola useEffect ked sa zmenia tieto hodnoty
+    }, [dispatch, match, successProductReview]) 
 
     const addToCartHandler = () => {
         history.push(`/cart/${match.params.id}?qty=${qty}`)
     }
 
     const submitHandler = (e) => {
-        e.preventDefault()  // kvoli potvrdzovaniu formularu
+        e.preventDefault()  
         dispatch(createProductReview(match.params.id, { rating, comment }))
     }
 
