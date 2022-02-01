@@ -14,7 +14,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
             type: ORDER_CREATE_REQUEST,
         })
 
-        // destructing, miesto bodkovej notacie
+        
         const { userLogin: { userInfo } } = getState()
 
         const config = {
@@ -45,7 +45,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
             type: ORDER_DETAILS_REQUEST,
         })
 
-        // destructing, miesto bodkovej notacie
+        
         const { userLogin: { userInfo } } = getState()
 
         const config = {
@@ -76,7 +76,7 @@ export const payOrder = (orderId, paymentResult) => async (dispatch, getState) =
         })
 
 
-        // destructing, miesto bodkovej notacie
+        
         const { userLogin: { userInfo } } = getState()
 
         const config = {
@@ -108,7 +108,7 @@ export const deliverOrder = (order) => async (dispatch, getState) => {
         })
 
 
-        // destructing, miesto bodkovej notacie
+        
         const { userLogin: { userInfo } } = getState()
 
         const config = {
@@ -139,7 +139,7 @@ export const listMyOrders = () => async (dispatch, getState) => {
         })
 
 
-        // destructing, miesto bodkovej notacie
+        
         const { userLogin: { userInfo } } = getState()
 
         const config = {
@@ -170,7 +170,7 @@ export const listOrders = () => async (dispatch, getState) => {
         })
 
 
-        // destructing, miesto bodkovej notacie
+        
         const { userLogin: { userInfo } } = getState()
 
         const config = {

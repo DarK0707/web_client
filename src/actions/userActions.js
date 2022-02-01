@@ -63,7 +63,7 @@ export const login = (email, password) => async (dispatch) => {
   }
 };
 
-// Logout action
+
 export const logout = () => (dispatch) => {
   localStorage.removeItem("userInfo");
   dispatch({ type: USER_LOGOUT });
@@ -193,7 +193,7 @@ export const listUsers = () => async (dispatch, getState) => {
       type: USER_LIST_REQUEST,
     });
 
-    // token
+    
     const {
       userLogin: { userInfo },
     } = getState();
@@ -231,7 +231,7 @@ export const deleteUser = (id) => async (dispatch, getState) => {
       userLogin: { userInfo },
     } = getState();
 
-    // pass token
+    
     const config = {
       headers: {
         Authorization: `Bearer ${userInfo.token}`,
@@ -262,7 +262,7 @@ export const updateUser = (user) => async (dispatch, getState) => {
       userLogin: { userInfo },
     } = getState();
 
-    // pass token
+    
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -275,7 +275,7 @@ export const updateUser = (user) => async (dispatch, getState) => {
     dispatch({ type: USER_UPDATE_SUCCESS });
     dispatch({
       type: USER_DETAILS_SUCCESS,
-      payload: data, // updated user
+      payload: data, 
     });
   } catch (error) {
     dispatch({
