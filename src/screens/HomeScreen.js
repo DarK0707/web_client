@@ -38,7 +38,7 @@ const HomeScreen = ({ match }) => {
           Geri dön
         </Link>
       )}
-      <h1> En son ürünler </h1>
+      <h1> En son yemekler </h1>
       {loading ? (
         <Loader />
       ) : error ? (
