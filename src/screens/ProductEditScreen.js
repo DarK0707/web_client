@@ -12,7 +12,7 @@ import { PRODUCT_UPDATE_RESET } from '../constants/productConstants'
 const ProductEditScreen = ({ match, history }) => {
     const productId = match.params.id
 
-    // Component level state
+   
     const [name, setName] = useState('')
     const [price, setPrice] = useState(0)
     const [image, setImage] = useState('')
@@ -24,7 +24,7 @@ const ProductEditScreen = ({ match, history }) => {
 
     const dispatch = useDispatch()
 
-    // Global states
+
     const productDetails = useSelector(state => state.productDetails)
     const { loading, error, product } = productDetails
 
@@ -39,7 +39,7 @@ const ProductEditScreen = ({ match, history }) => {
             if (!product.name || product._id !== productId) {
                 dispatch(listProductDetails(productId))
             } else {
-                // predvyplnit formular aktualnymi udajmi zo state
+                
                 setName(product.name)
                 setPrice(product.price)
                 setImage(product.image)
@@ -52,9 +52,9 @@ const ProductEditScreen = ({ match, history }) => {
     }, [dispatch, history, productId, product, successUpdate])
 
     const uploadFileHandler = async (e) => {
-        const file = e.target.files[0]  // can upload multiple files
+        const file = e.target.files[0]  
         const formData = new FormData()
-        formData.append('image', file)    // image sa vola i v backend
+        formData.append('image', file)    
         setUploading(true)
 
         try {
@@ -74,7 +74,7 @@ const ProductEditScreen = ({ match, history }) => {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        // UPDATE PRODUCT
+     
         dispatch(updateProduct({
             _id: productId,
             name,
