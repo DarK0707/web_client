@@ -16,7 +16,7 @@ export default function Faq() {
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0">
-            <Card.Body>Soru1 icelik</Card.Body>
+            <Card.Body>Soru1 İcerik</Card.Body>
           </Accordion.Collapse>
         </Card>
       </Accordion>

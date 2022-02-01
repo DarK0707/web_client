@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux' // for Redux state
+import { useDispatch, useSelector } from 'react-redux' 
 import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message'
 import { addToCart, removeFromCart } from '../actions/cartActions'
 
 
-const CartScreen = ({ match, location, history }) => { // match su parametre z url
+const CartScreen = ({ match, location, history }) => { 
     const productId = match.params.id
 
-    // what is after questionmark
     const qty = location.search ? Number(location.search.split('=')[1]) : 1
 
     const dispatch = useDispatch()
@@ -18,7 +17,7 @@ const CartScreen = ({ match, location, history }) => { // match su parametre z u
     const { cartItems } = cart
 
     useEffect(() => {
-        // only if it has id
+        
         if (productId) {
             dispatch(addToCart(productId, qty))
         }
@@ -41,7 +40,7 @@ const CartScreen = ({ match, location, history }) => { // match su parametre z u
                     </Message>)
                     : (
                         <ListGroup variant='flush'>
-                            { cartItems.map(item => (   // POZOR TYP ZATVORKY!!!
+                            { cartItems.map(item => (   
                                 <ListGroup.Item key={item.product}>
                                     <Row>
                                         <Col md={2}>
@@ -77,7 +76,7 @@ const CartScreen = ({ match, location, history }) => { // match su parametre z u
                     <ListGroup variant='flush'>
                         <ListGroup.Item>
                             <h2>Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)}) items</h2>
-                            {/* starting for accumulator is 0 */}
+                            {}
                             ${cartItems.reduce((acc, item) => acc + item.qty * item.price, 0).toFixed(2)}
                         </ListGroup.Item>
                         <ListGroup.Item>

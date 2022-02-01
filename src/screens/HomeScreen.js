@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-// useDispatch - to call an action, useSelector - select part of state
 import { useDispatch, useSelector } from "react-redux";
 import { Col, Pagination, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -15,17 +14,17 @@ const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword;
   const pageNumber = match.params.pageNumber || 1;
 
-  // dispatch
+  
   const dispatch = useDispatch();
 
-  // get piece of state - productList
+
   const productList = useSelector((state) => state.productList);
-  // parts of reducer
+
   const { loading, error, products, page, pages } = productList;
 
-  // call listProducts action
+ 
   useEffect(() => {
-    // FIRE OFF the action
+    
     dispatch(listProducts(keyword, pageNumber));
   }, [dispatch, keyword, pageNumber]);
 

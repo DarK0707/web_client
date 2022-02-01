@@ -1,4 +1,4 @@
-// Payment method screen
+
 import React, { useState } from 'react'
 import { Form, Button, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
@@ -11,7 +11,7 @@ const PaymentScreen = ({ history }) => {
     const cart = useSelector(state => state.cart)
     const { shippingAddress } = cart
 
-    // ak nie je zadana adresa treba ju zadat
+   
     if (!shippingAddress) {
         history.push('/shipping')
     }
@@ -22,9 +22,9 @@ const PaymentScreen = ({ history }) => {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        // DISPATCH SAVE PAYMENT METHOD
+        
         dispatch(savePaymentMethod(paymentMethod))
-        history.push('/placeorder')    // go to next page
+        history.push('/placeorder')   
     }
 
     return (
@@ -39,9 +39,7 @@ const PaymentScreen = ({ history }) => {
                             id='PayPal' name='paymentMethod' value='PayPal' checked
                             onChange={(e) => setPaymentMethod(e.target.value)}></Form.Check>
 
-                        {/* <Form.Check type='radio' label='Stripe'
-                            id='Stripe' name='paymentMethod' value='Stripe'
-                            onChange={(e) => setPaymentMethod(e.target.value)}></Form.Check> */}
+                        {}
                     </Col>
                 </Form.Group>
 

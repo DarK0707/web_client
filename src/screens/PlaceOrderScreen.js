@@ -1,4 +1,4 @@
-// Summary of ordered stuff
+
 import React, { useState, useEffect } from 'react'
 import { Button, Row, Col, ListGroup, Image, Card, ListGroupItem } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
@@ -12,12 +12,12 @@ const PlaceOrderScreen = ({ history }) => {
 
     const cart = useSelector(state => state.cart)
 
-    // Funkcia na zarovnanie na 2 desatinne miesta
+    
     const addDecimals = (num) => {
         return (Math.round(num * 100) / 100).toFixed(2)
     }
 
-    // Calculate prices
+   
     cart.itemsPrice = addDecimals(cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0))
     cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 100)
     cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice).toFixed(2)))
@@ -30,7 +30,7 @@ const PlaceOrderScreen = ({ history }) => {
         if (success) {
             history.push(`/order/${order._id}`)
         }
-        // eslint-disable-next-line
+       
     }, [history, success])
 
     const placeOrderHandler = () => {

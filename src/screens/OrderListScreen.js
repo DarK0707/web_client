@@ -18,10 +18,10 @@ const OrderListScreen = ({ history }) => {
     useEffect(() => {
         if (userInfo && userInfo.isAdmin) {
             dispatch(listOrders())
-        } else {  // not admin or not logged in
+        } else { 
             history.push('/login')
         }
-    }, [dispatch, history, userInfo])  // dependency preto aby sa to spustilo este raz po successDelete
+    }, [dispatch, history, userInfo])  
 
     return (
         <>

@@ -5,21 +5,21 @@ import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
-import { login } from '../actions/userActions'    // login action
+import { login } from '../actions/userActions'   
 
 const LoginScreen = ({ location, history }) => {
-    // Component level state
+   
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     const dispatch = useDispatch()
 
     const userLogin = useSelector(state => state.userLogin)
-    const { loading, error, userInfo } = userLogin  // takto sa vola v store.js
+    const { loading, error, userInfo } = userLogin  
 
-    const redirect = location.search ? location.search.split('=')[1] : '/'   // URL query string
+    const redirect = location.search ? location.search.split('=')[1] : '/'   
 
-    // redirect when we are sign in
+   
     useEffect(() => {
         if (userInfo) {
             history.push(redirect)
@@ -28,10 +28,8 @@ const LoginScreen = ({ location, history }) => {
 
 
     const submitHandler = (e) => {
-        e.preventDefault() // page dont refresh
-        // DISPATCH LOGIN ACTION
-        // zavolanie akcie
-        dispatch(login(email, password))   // tak sa vola v userActions.js
+        e.preventDefault() 
+        dispatch(login(email, password))  
     }
 
     return (

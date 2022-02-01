@@ -9,9 +9,7 @@ import {
 } from "../constants/productConstants"
 import axios from 'axios'
 
-// robi to co useEffect
-// action creator
-// redux thunk - add function to a function
+
 export const listProducts = (keyword='', pageNumber='') => async (dispatch) => {
     try {
         dispatch({ type: PRODUCT_LIST_REQUEST })
@@ -30,7 +28,7 @@ export const listProducts = (keyword='', pageNumber='') => async (dispatch) => {
     }
 }
 
-// List Product details
+
 export const listProductDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: PRODUCT_DETAILS_REQUEST })
@@ -56,7 +54,7 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
         })
 
 
-        // destructing, miesto bodkovej notacie
+        
         const { userLogin: { userInfo } } = getState()
 
         const config = {
@@ -86,7 +84,7 @@ export const createProduct = () => async (dispatch, getState) => {
         })
 
 
-        // destructing, miesto bodkovej notacie
+       
         const { userLogin: { userInfo } } = getState()
 
         const config = {

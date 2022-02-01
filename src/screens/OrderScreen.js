@@ -1,4 +1,4 @@
-// Summary of ordered stuff
+
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { PayPalButton } from 'react-paypal-button-v2'
@@ -11,7 +11,7 @@ import { getOrderDetails, payOrder, deliverOrder } from '../actions/orderActions
 import { ORDER_PAY_RESET, ORDER_DELIVER_RESET } from '../constants/orderConstants'
 
 const OrderScreen = ({ match, history }) => {
-    const orderId = match.params.id     // id z URL
+    const orderId = match.params.id     
 
     const [sdkReady, setSdkReady] = useState(false)
 
@@ -21,7 +21,7 @@ const OrderScreen = ({ match, history }) => {
     const { order, loading, error } = orderDetails
 
     const orderPay = useSelector((state) => state.orderPay)
-    const { loading: loadingPay, success: successPay } = orderPay // premenovanie navratovych premennych z reducer
+    const { loading: loadingPay, success: successPay } = orderPay 
 
     const orderDeliver = useSelector((state) => state.orderDeliver)
     const { loading: loadingDeliver, success: successDeliver } = orderDeliver
@@ -30,23 +30,23 @@ const OrderScreen = ({ match, history }) => {
     const { userInfo } = userLogin
 
     if (!loading) {
-        // Funkcia na zarovnanie na 2 desatinne miesta
+        
         const addDecimals = (num) => {
             return (Math.round(num * 100) / 100).toFixed(2)
         }
 
-        // Calculate prices
+        
         order.itemsPrice = addDecimals(order.orderItems.reduce(
             (acc, item) => acc + item.price * item.qty, 0))
     }
 
     useEffect(() => {
 
-        if(!userInfo){  // ci sme prihlaseny
+        if(!userInfo){  
             history.push('/login')
         }
 
-        // Dynamically adding paypal script
+        
         const addPayPalScript = async () => {
             const { data: clientId } = await axios.get('/api/config/paypal')
             const script = document.createElement('script')
@@ -72,7 +72,7 @@ const OrderScreen = ({ match, history }) => {
     }, [order, orderId, successPay, successDeliver])
 
     const successPaymentHandler = (paymentResult) => {
-        // CALL PAY ORDER ACTION
+        
         console.log(paymentResult)
         dispatch(payOrder(orderId, paymentResult))
     }
