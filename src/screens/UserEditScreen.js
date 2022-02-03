@@ -5,24 +5,18 @@ import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import FormContainer from '../components/FormContainer'
-import { getUserDetails, updateUser } from '../actions/userActions'    // login action
+import { getUserDetails, updateUser } from '../actions/userActions'   
 import { USER_UPDATE_RESET } from '../constants/userConstants'
 
 const UserEditScreen = ({ match, history }) => {
     const userId = match.params.id
-
-    // Component level state
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [isAdmin, setIsAdmin] = useState(false)
 
     const dispatch = useDispatch()
-
-    // Global states
     const userDetails = useSelector(state => state.userDetails)
     const { loading, error, user } = userDetails
-
-    // userUpdate state
     const userUpdate = useSelector(state => state.userUpdate)
     const { loading: loadingUpdate, error: errorUpdate, success: successUpdate } = userUpdate
 
@@ -35,7 +29,6 @@ const UserEditScreen = ({ match, history }) => {
             if (!user.name || user._id !== userId) {
                 dispatch(getUserDetails(userId))
             } else {
-                // predvyplnit formular aktualnymi udajmi zo state
                 setName(user.name)
                 setEmail(user.email)
                 setIsAdmin(user.isAdmin)
@@ -51,10 +44,10 @@ const UserEditScreen = ({ match, history }) => {
 
     return (
         <>
-            <Link to='/admin/userlist' className='btn btn-light my-3'>Go Back</Link>
+            <Link to='/admin/userlist' className='btn btn-light my-3'>Geri Git</Link>
 
             <FormContainer>
-                <h1>Edit user</h1>
+                <h1>Kullanıcıyı Düzenle</h1>
                 {loadingUpdate && <Loader /> }
                 {errorUpdate && <Message variant='danger'>{errorUpdate}</Message> }
                 {loading ? <Loader />
@@ -62,13 +55,13 @@ const UserEditScreen = ({ match, history }) => {
                         : (
                             <Form onSubmit={submitHandler}>
                                 <Form.Group controlId='name'>
-                                    <Form.Label>Name</Form.Label>
+                                    <Form.Label>İsim</Form.Label>
                                     <Form.Control type='name' placeholder='Enter name' value={name}
                                         onChange={(e) => setName(e.target.value)} ></Form.Control>
                                 </Form.Group>
 
                                 <Form.Group controlId='email'>
-                                    <Form.Label>Email Address</Form.Label>
+                                    <Form.Label>Email</Form.Label>
                                     <Form.Control type='email' placeholder='Enter email' value={email}
                                         onChange={(e) => setEmail(e.target.value)} ></Form.Control>
                                 </Form.Group>
@@ -78,7 +71,7 @@ const UserEditScreen = ({ match, history }) => {
                                 </Form.Group>
 
 
-                                <Button type='submit' variant='primary'>Update</Button>
+                                <Button type='submit' variant='primary'>Güncelle</Button>
 
                             </Form>)}
             </FormContainer>

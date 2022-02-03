@@ -39,17 +39,15 @@ const ProductListScreen = ({ history, match }) => {
             dispatch(listProducts('', pageNumber))
         }
 
-    }, [dispatch, history, userInfo, successDelete, successCreate, createdProduct, pageNumber])  // dependency preto aby sa to spustilo este raz po successDelete
+    }, [dispatch, history, userInfo, successDelete, successCreate, createdProduct, pageNumber]) 
 
     const deleteHandler = (id) => {
         if (window.confirm('Are you sure')) {
-            // DELETE PRODUCTS
             dispatch(deleteProduct(id))
         }
     }
 
     const createProductHandler = () => {
-        // CREATE PRODUCT
         dispatch(createProduct())
     }
 
@@ -57,11 +55,11 @@ const ProductListScreen = ({ history, match }) => {
         <>
             <Row className='align-items-center'>
                 <Col>
-                    <h1>Products</h1>
+                    <h1>Ürünler</h1>
                 </Col>
                 <Col className='text-right'>
                     <Button className='my-3' onClick={createProductHandler}>
-                        <i className='fas fa-plus' /> Create Product
+                        <i className='fas fa-plus' /> Ürün Ekle
                     </Button>
                 </Col>
             </Row>
@@ -79,10 +77,10 @@ const ProductListScreen = ({ history, match }) => {
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>NAME</th>
-                                <th>PRICE</th>
-                                <th>CATEGORY</th>
-                                <th>BRAND</th>
+                                <th>İSİM</th>
+                                <th>FİYAT</th>
+                                <th>KATEGORİ</th>
+                                <th>MARKA</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -91,7 +89,7 @@ const ProductListScreen = ({ history, match }) => {
                                 <tr key={product._id}>
                                     <td>{product._id}</td>
                                     <td>{product.name}</td>
-                                    <td>${product.price}</td>
+                                    <td>₺{product.price}</td>
                                     <td>{product.category}</td>
                                     <td>{product.brand}</td>
                                     <td>

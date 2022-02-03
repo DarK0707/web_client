@@ -16,8 +16,6 @@ export const addToCart = (id, qty) => async (dispatch, getState) => {
             qty
         }
     })
-
-    // save in local storage - local storage api
     localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
 } 
 
@@ -37,7 +35,7 @@ export const saveShippingAddress = (data) => (dispatch) => {
     localStorage.setItem('shippingAddress', JSON.stringify(data))
 }
 
-export const savePaymentMethod = (data) => (dispatch) => {  // data=paymentMethod
+export const savePaymentMethod = (data) => (dispatch) => { 
     dispatch({
         type: CART_SAVE_PAYMENT_METHOD,
         payload: data

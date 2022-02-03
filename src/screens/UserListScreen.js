@@ -21,10 +21,10 @@ const UserListScreen = ({ history }) => {
     useEffect(() => {
         if (userInfo && userInfo.isAdmin) {
             dispatch(listUsers())
-        } else {  // not admin or not logged in
+        } else { 
             history.push('/login')
         }
-    }, [dispatch, history, successDelete, userInfo])  // dependency preto aby sa to spustilo este raz po successDelete
+    }, [dispatch, history, successDelete, userInfo])  
 
     const deleteHandler = (id) => {
         if(window.confirm('Are you sure')){
@@ -34,14 +34,14 @@ const UserListScreen = ({ history }) => {
 
     return (
         <>
-            <h1>Users</h1>
+            <h1>Kullanıcılar</h1>
             {loading ? <Loader />
                 : error ? <Message variant='danger'>{error}</Message>
                     : (<Table striped bordered hover responsive className='table-sm'>
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>NAME</th>
+                                <th>İSİM</th>
                                 <th>EMAIL</th>
                                 <th>ADMIN</th>
                                 <th></th>

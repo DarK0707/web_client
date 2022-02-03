@@ -89,10 +89,10 @@ const ProductEditScreen = ({ match, history }) => {
 
     return (
         <>
-            <Link to='/admin/productlist' className='btn btn-light my-3'>Go Back</Link>
+            <Link to='/admin/productlist' className='btn btn-light my-3'>Geri Dön</Link>
 
             <FormContainer>
-                <h1>Edit Product</h1>
+                <h1>Ürünleri Düzenle</h1>
                 {loadingUpdate && <Loader />}
                 {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
                 {loading ? <Loader />
@@ -100,19 +100,19 @@ const ProductEditScreen = ({ match, history }) => {
                         : (
                             <Form onSubmit={submitHandler}>
                                 <Form.Group controlId='name'>
-                                    <Form.Label>Name</Form.Label>
+                                    <Form.Label>İsim</Form.Label>
                                     <Form.Control type='text' placeholder='Enter name' value={name}
                                         onChange={(e) => setName(e.target.value)} ></Form.Control>
                                 </Form.Group>
 
                                 <Form.Group controlId='price'>
-                                    <Form.Label>Price</Form.Label>
+                                    <Form.Label>Fiyat</Form.Label>
                                     <Form.Control type='number' placeholder='Enter price' value={price}
                                         onChange={(e) => setPrice(e.target.value)} ></Form.Control>
                                 </Form.Group>
 
                                 <Form.Group controlId='image'>
-                                    <Form.Label>Image</Form.Label>
+                                    <Form.Label>Fotoğraf</Form.Label>
                                     <Form.Control type='text' placeholder='Enter image url' value={image}
                                         onChange={(e) => setImage(e.target.value)} ></Form.Control>
                                     <Form.File id='image-file' label='Choose File' custom
@@ -121,25 +121,25 @@ const ProductEditScreen = ({ match, history }) => {
                                 </Form.Group>
 
                                 <Form.Group controlId='brand'>
-                                    <Form.Label>Brand</Form.Label>
+                                    <Form.Label>Marka</Form.Label>
                                     <Form.Control type='text' placeholder='Enter brand' value={brand}
                                         onChange={(e) => setBrand(e.target.value)} ></Form.Control>
                                 </Form.Group>
 
                                 <Form.Group controlId='countInStock'>
-                                    <Form.Label>Count in Stock</Form.Label>
+                                    <Form.Label>Stok Sayısı</Form.Label>
                                     <Form.Control type='number' placeholder='Enter count in stock' value={countInStock}
                                         onChange={(e) => setCountInStock(e.target.value)} ></Form.Control>
                                 </Form.Group>
 
                                 <Form.Group controlId='category'>
-                                    <Form.Label>Category</Form.Label>
+                                    <Form.Label>Kategori</Form.Label>
                                     <Form.Control type='text' placeholder='Enter category' value={category}
                                         onChange={(e) => setCategory(e.target.value)} ></Form.Control>
                                 </Form.Group>
 
                                 <Form.Group controlId='description'>
-                                    <Form.Label>Description</Form.Label>
+                                    <Form.Label>Ürün Açıklaması</Form.Label>
                                     <Form.Control type='text' placeholder='Enter description' value={description}
                                         onChange={(e) => setDescription(e.target.value)} ></Form.Control>
                                 </Form.Group>

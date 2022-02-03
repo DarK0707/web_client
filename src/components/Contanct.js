@@ -45,7 +45,7 @@ function Contanct() {
             </div>
             <div className="form-group">
               <label className="control-label" htmlFor="email">
-                Email addresinizi giriniz
+                Email adresinizi giriniz
               </label>
               <div className="input-group">
                 <input
@@ -66,7 +66,7 @@ function Contanct() {
             </div>
             <div className="form-group">
               <label className="control-label" htmlFor="message">
-                Message *
+                Mesajınız
               </label>
               <div className="input-group">
                 <textarea

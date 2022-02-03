@@ -34,9 +34,9 @@ const CartScreen = ({ match, location, history }) => {
     return (
         <Row>
             <Col md={8}>
-                <h1>Shopping Cart</h1>
+                <h1>Sepetim</h1>
                 {cartItems.length === 0 ?
-                    (<Message>Your cart is empty <Link to='/'>Go Back</Link>
+                    (<Message>Sepetiniz Boş <Link to='/'>Geri Dön</Link>
                     </Message>)
                     : (
                         <ListGroup variant='flush'>
@@ -75,7 +75,7 @@ const CartScreen = ({ match, location, history }) => {
                 <Card>
                     <ListGroup variant='flush'>
                         <ListGroup.Item>
-                            <h2>Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)}) items</h2>
+                            <h2>Toplam ({cartItems.reduce((acc, item) => acc + item.qty, 0)}) Ürünler</h2>
                             {}
                             ${cartItems.reduce((acc, item) => acc + item.qty * item.price, 0).toFixed(2)}
                         </ListGroup.Item>
@@ -84,7 +84,7 @@ const CartScreen = ({ match, location, history }) => {
                                 disabled={cartItems.length === 0}
                                 onClick={checkoutHandler}
                             >
-                                Proceed to checkout
+                                Ödemeye Devam Et
                             </Button>
                         </ListGroup.Item>
                     </ListGroup>

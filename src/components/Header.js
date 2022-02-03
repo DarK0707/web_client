@@ -21,7 +21,7 @@ const Header = () => {
       <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
         <Container>
           <LinkContainer to="/">
-            <Navbar.Brand>Surup Satın AL</Navbar.Brand>
+            <Navbar.Brand>ShineSafely</Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -59,13 +59,13 @@ const Header = () => {
               {userInfo && userInfo.isAdmin && (
                 <NavDropdown title="Admin" id="adminmenu">
                   <LinkContainer to="/admin/userlist">
-                    <NavDropdown.Item>Kullınıcılar</NavDropdown.Item>
+                    <NavDropdown.Item>Kullanıcılar</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to="/admin/productlist">
                     <NavDropdown.Item>Ürünler</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to="/admin/orderlist">
-                    <NavDropdown.Item>Musteri</NavDropdown.Item>
+                    <NavDropdown.Item>Müşteri</NavDropdown.Item>
                   </LinkContainer>
                 </NavDropdown>
               )}

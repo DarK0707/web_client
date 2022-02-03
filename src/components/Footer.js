@@ -34,7 +34,7 @@ const Footer = () => {
               </p>
               <p>
                 <a href="/faq" className="text-reset">
-                  Şıkca sorulan sorular
+                  Sıkca sorulan sorular
                 </a>
               </p>
             </div>

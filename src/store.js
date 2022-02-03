@@ -1,5 +1,3 @@
-// Redux store file
-// to store all reducers and middleware
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
@@ -18,8 +16,7 @@ import {
 } from './reducers/orderReducers'
 
 const reducer = combineReducers({
-    // use reducer
-    productList: productListReducer, // productList is part of state
+    productList: productListReducer, 
     productDetails: productDetailsReducer,
     productDelete: productDeleteReducer,
     productCreate: productCreateReducer,
