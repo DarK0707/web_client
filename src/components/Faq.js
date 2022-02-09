@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 export default function Faq() {
   return (
     <div style={{ display: "block", width: 700, padding: 30 }}>
-      <h4>Sıkça sorunlan sorular</h4>
+      <h4>Sıkça Sorulan Sorular</h4>
       <Accordion defaultActiveKey="0">
         <Card>
           <Card.Header>
