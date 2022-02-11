@@ -101,21 +101,21 @@ const ProductEditScreen = ({ match, history }) => {
                             <Form onSubmit={submitHandler}>
                                 <Form.Group controlId='name'>
                                     <Form.Label>İsim</Form.Label>
-                                    <Form.Control type='text' placeholder='Enter name' value={name}
+                                    <Form.Control type='text' placeholder='Adını Girin' value={name}
                                         onChange={(e) => setName(e.target.value)} ></Form.Control>
                                 </Form.Group>
 
                                 <Form.Group controlId='price'>
                                     <Form.Label>Fiyat</Form.Label>
-                                    <Form.Control type='number' placeholder='Enter price' value={price}
+                                    <Form.Control type='number' placeholder='Fiyatını Girin' value={price}
                                         onChange={(e) => setPrice(e.target.value)} ></Form.Control>
                                 </Form.Group>
 
                                 <Form.Group controlId='image'>
                                     <Form.Label>Fotoğraf</Form.Label>
-                                    <Form.Control type='text' placeholder='Enter image url' value={image}
+                                    <Form.Control type='text' placeholder='Resmin Urlsini girin' value={image}
                                         onChange={(e) => setImage(e.target.value)} ></Form.Control>
-                                    <Form.File id='image-file' label='Choose File' custom
+                                    <Form.File id='image-file' label='Resim Seç' custom
                                         onChange={uploadFileHandler}></Form.File>
                                     {uploading && <Loader />}
                                 </Form.Group>
