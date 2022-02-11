@@ -12,11 +12,11 @@ export default function Faq() {
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="0">
-            asdasdsad
+            Ürün Bozuk Çıktı Ne Yapmalıyım
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0">
-            <Card.Body>Soru1 İcerik</Card.Body>
+            <Card.Body>Kurulumu servis tarafından yapılacak ürün ya da elektronik bir ürün arızalı ise servis raporu gerekmektedir. Ürünle ilgili servis raporunuz varsa; iade formunu doldurarak ürünü ve raporu firmamıza gönderebilirsiniz. Elektronik olmayan ürünleriniz arızalı ise, siparişinizin teslimat tarihinden itibaren 0-14 günlük süre içinde iade işlemi başlatabilirsiniz. 14 günlük cayma süresi dışında olan arızalı ürünlerin tamamı için servis raporu gerekmektedir.</Card.Body>
           </Accordion.Collapse>
         </Card>
       </Accordion>
@@ -24,11 +24,11 @@ export default function Faq() {
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="0">
-              Soru2
+              Sipariş ettiğim ürün yerine farklı ürün geldi ne yapabilirim?
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0">
-            <Card.Body>Soru 2</Card.Body>
+            <Card.Body>Ürün paketleme ya da kargo gönderisi etiketleme sırasında yaşanan bir sorundan dolayı farklı ürün gönderilmiş olabilmektedir. Yanlış gelen ürün için, ürünle birlikte gönderilen iade formunu doldurmalı ve Hesabım-Siparişlerim menüsünden online iade talebinizi iletmelisiniz. İade talebinizi oluşturmanızın ardından size verilecek iade kodu ile ücretsiz gönderim yapabilirsiniz. İade ve geri gönderimle ilgili detaylı bilgi alabilmek için Ürün İade İşlemleri başlığını ziyaret edebilirsiniz.</Card.Body>
           </Accordion.Collapse>
         </Card>
       </Accordion>
@@ -36,11 +36,11 @@ export default function Faq() {
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="0">
-              Soru 3
+              Üye olmadan sipariş oluşturabilir miyim ?
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0">
-            <Card.Body>Soru 3</Card.Body>
+            <Card.Body>Sipariş oluşturabilmeniz için üye olmanız gerekmektedir.</Card.Body>
           </Accordion.Collapse>
         </Card>
       </Accordion>
