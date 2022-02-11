@@ -48,7 +48,7 @@ const LoginScreen = ({ location, history }) => {
                     <Form.Control type='password' placeholder='Enter password' value={password}
                         onChange={(e) => setPassword(e.target.value)} ></Form.Control>
                 </Form.Group>
-                <Button type='submit' variant='primary'>Kayıt Ol</Button>
+                <Button type='submit' variant='primary'>Giriş Yap</Button>
                 <Row className='py-3'>
                     <Col> Kayıt Olmak İstermisiniz? <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>Kayıt Ol</Link></Col>
                 </Row>
