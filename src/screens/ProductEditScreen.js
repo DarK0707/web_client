@@ -122,25 +122,25 @@ const ProductEditScreen = ({ match, history }) => {
 
                                 <Form.Group controlId='brand'>
                                     <Form.Label>Marka</Form.Label>
-                                    <Form.Control type='text' placeholder='Enter brand' value={brand}
+                                    <Form.Control type='text' placeholder='Marka Girin' value={brand}
                                         onChange={(e) => setBrand(e.target.value)} ></Form.Control>
                                 </Form.Group>
 
                                 <Form.Group controlId='countInStock'>
                                     <Form.Label>Stok Sayısı</Form.Label>
-                                    <Form.Control type='number' placeholder='Enter count in stock' value={countInStock}
+                                    <Form.Control type='number' placeholder='Stok Sayısını Girin' value={countInStock}
                                         onChange={(e) => setCountInStock(e.target.value)} ></Form.Control>
                                 </Form.Group>
 
                                 <Form.Group controlId='category'>
                                     <Form.Label>Kategori</Form.Label>
-                                    <Form.Control type='text' placeholder='Enter category' value={category}
+                                    <Form.Control type='text' placeholder='Kategori Girin' value={category}
                                         onChange={(e) => setCategory(e.target.value)} ></Form.Control>
                                 </Form.Group>
 
                                 <Form.Group controlId='description'>
                                     <Form.Label>Ürün Açıklaması</Form.Label>
-                                    <Form.Control type='text' placeholder='Enter description' value={description}
+                                    <Form.Control type='text' placeholder='Açıklama Girin' value={description}
                                         onChange={(e) => setDescription(e.target.value)} ></Form.Control>
                                 </Form.Group>
 
