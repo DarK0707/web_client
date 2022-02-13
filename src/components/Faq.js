@@ -16,7 +16,7 @@ export default function Faq() {
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0">
-            <Card.Body>Ürünü 7-14 gün içerisinde geri iade edip paranızı geri alabilirsiniz.</Card.Body>
+            <Card.Body>Ürünü 7-14 gün içerisinde iade edip paranızı geri alabilirsiniz.</Card.Body>
           </Accordion.Collapse>
         </Card>
       </Accordion>
