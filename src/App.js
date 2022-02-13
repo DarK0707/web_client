@@ -18,7 +18,7 @@ import UserListScreen from "./screens/UserListScreen";
 import UserEditScreen from "./screens/UserEditScreen";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductEditScreen from "./screens/ProductEditScreen";
-import Contanct from "./components/Contanct";
+import Contact from "./components/Contact";
 import Faq from "./components/Faq";
 import Feedback from "./components/Feedback";
 
@@ -54,7 +54,7 @@ const App = () => {
           <Route path="/admin/product/:id/edit" component={ProductEditScreen} />
           <Route path="/search/:keyword" component={HomeScreen} exact />
           <Route path="/page/:pageNumber" component={HomeScreen} exact />
-          <Route path="/contant" component={Contanct} exact />
+          <Route path="/contact" component={Contact} exact />
           <Route path="/feedback" component={Feedback} exact />
           <Route
             path="/search/:keyword/page/:pageNumber"

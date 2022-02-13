@@ -28,7 +28,7 @@ const Header = () => {
             <Route render={({ history }) => <SearchBox history={history} />} />
 
             <Nav className="ml-auto">
-              <LinkContainer to="/contant">
+              <LinkContainer to="/contact">
                 <Nav.Link>
                   <i className="fa fa-volume-control-phone" /> İletişim
                 </Nav.Link>

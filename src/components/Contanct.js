@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-function Contanct() {
+function Contact() {
   return (
     <div className="container">
       <div id="contact_form" className="row">
@@ -105,4 +105,4 @@ function Contanct() {
   );
 }
 
-export default Contanct;
+export default Contact;
