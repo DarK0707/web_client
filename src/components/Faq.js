@@ -16,7 +16,7 @@ export default function Faq() {
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0">
-            <Card.Body>Kurulumu servis tarafından yapılacak ürün ya da elektronik bir ürün arızalı ise servis raporu gerekmektedir. Ürünle ilgili servis raporunuz varsa; iade formunu doldurarak ürünü ve raporu firmamıza gönderebilirsiniz. Elektronik olmayan ürünleriniz arızalı ise, siparişinizin teslimat tarihinden itibaren 0-14 günlük süre içinde iade işlemi başlatabilirsiniz. 14 günlük cayma süresi dışında olan arızalı ürünlerin tamamı için servis raporu gerekmektedir.</Card.Body>
+            <Card.Body>Ürünü 7-14 gün içerisinde geri iade edip paranızı geri alabilirsiniz.</Card.Body>
           </Accordion.Collapse>
         </Card>
       </Accordion>
