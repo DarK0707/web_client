@@ -61,7 +61,7 @@ function Contanct() {
                 </span>
               </div>
               <span className="help-block" style={{ display: "none" }}>
-                Lütfen gecerli bir email adresi giriniz
+                Lütfen geçerli bir email adresi giriniz
               </span>
             </div>
             <div className="form-group">
