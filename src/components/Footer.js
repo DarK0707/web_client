@@ -10,18 +10,14 @@ const Footer = () => {
             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">
                 <i className="fas fa-gem me-3" />
-                ShineSafely
+                Artin-Systems
               </h6>
               <p>
-                Kokteyl ve kahve şurupları, meyve püresi ile başladığımız üretim
-                ağında bugün 85 çeşit şurup, 30 çeşit püre ile birlikte toplamda
-                185 çeşit ürün ile devam etmekteyiz. Ürünlerin üretim aşamasında
-                alanında uzman gıda mühendisi ekibimizi AR-GE ekibimizin
-                Türkiye’nin her bölgesinden bar içi görevli arkadaşlardan
-                topladığı bilgilerle buluşturuyoruz. Yenilikçi tarzımız ile iş
-                ortaklarımıza aradıkları her ürünü sunmak ile birlikte özgün
-                ürünlerimiz ile bar içi görevli arkadaşların hayal güçlerini
-                birleştirip alanımızda yepyeni bir dünya sunuyoruz.
+              Art-In Systems, başta Akdeniz Bölgesi olmak üzere, büyük-küçük her türlü firmanın bilişim ihtiyacını karşılayabilmek için, 2007 yılından itibaren özel bilişim çözümleri üretmektedir.
+
+Ürün ve hizmet ağı ile hızlı bir şekilde büyüyerek Türkiye çapında iş yapan bir bilişim firması haline gelmiştir. İsmini bu güne kadar geliştirmiş olduğu yazılım uygulamalarında kullandığı ve kullanacağı Artificial Intelligence (Yapay Zeka) algoritmalarından almıştır. Bu sayede geliştirilmiş olan uygulamalar hızlı, kolay kullanılan, kolay adapte edilen, güvenilir, uygulamalar olmuştur.
+
+Buradan yola çıkarak kendi felsefesini de; her yeniliğe açık, her zaman öğrenerek hızlı gelişen, yaptığı her işi müşterinin faydası için yapan, doğru çözümler üreten firma olarak belirlemiştir.
               </p>
             </div>
 
