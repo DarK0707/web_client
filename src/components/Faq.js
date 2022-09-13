@@ -12,7 +12,7 @@ export default function Faq() {
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="0">
-            Ürün Bozuk Çıktı Ne Yapmalıyım 
+            Ürün Arızalı Ne Yapabilirim ?
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0">
