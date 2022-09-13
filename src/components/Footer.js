@@ -25,12 +25,12 @@ Buradan yola çıkarak kendi felsefesini de; her yeniliğe açık, her zaman ö�
               <h6 className="text-uppercase fw-bold mb-4">Yardım</h6>
               <p>
                 <a href="/feedback" className="text-reset">
-                  Geri İade İçin Bilgilendirme
+                Gizlilik Sözleşmesi
                 </a>
               </p>
               <p>
                 <a href="/faq" className="text-reset">
-                  Sıkca sorulan sorular
+                  Sıkça sorulan sorular
                 </a>
               </p>
             </div>
@@ -44,7 +44,7 @@ Buradan yola çıkarak kendi felsefesini de; her yeniliğe açık, her zaman ö�
       >
         © 2022 Copyright:
         <a className="text-reset fw-bold" href="/">
-          ShineSafely
+          Art-in Systems
         </a>
       </div>
     </footer>
