@@ -13,11 +13,23 @@ const Footer = () => {
                 Artin-Systems
               </h6>
               <p>
-              Art-In Systems, başta Akdeniz Bölgesi olmak üzere, büyük-küçük her türlü firmanın bilişim ihtiyacını karşılayabilmek için, 2007 yılından itibaren özel bilişim çözümleri üretmektedir.
-
-Ürün ve hizmet ağı ile hızlı bir şekilde büyüyerek Türkiye çapında iş yapan bir bilişim firması haline gelmiştir. İsmini bu güne kadar geliştirmiş olduğu yazılım uygulamalarında kullandığı ve kullanacağı Artificial Intelligence (Yapay Zeka) algoritmalarından almıştır. Bu sayede geliştirilmiş olan uygulamalar hızlı, kolay kullanılan, kolay adapte edilen, güvenilir, uygulamalar olmuştur.
-
-Buradan yola çıkarak kendi felsefesini de; her yeniliğe açık, her zaman öğrenerek hızlı gelişen, yaptığı her işi müşterinin faydası için yapan, doğru çözümler üreten firma olarak belirlemiştir.
+                1912'de kurulan bir aile şirketi, birinci sınıf bir Fransız
+                markası, yenilikçi lezzet çözümleri yaratıcısı, tüm dünyadaki
+                konaklama profesyonelleri için güvenilir bir ortak: işte
+                ShineSafely ShineSafely'nin kalbinde insanlar var: açık fikirli,
+                gurme, tutkulu, meraklı, yeni fikirlere açık, her zaman
+                sınırları zorlayan, sonsuza kadar ilham vermeye çalışan
+                insanlar. Kalite, yaratıcılık ve yenilikçilik: Bu üç kelime,
+                düşünme ve çalışma şeklimizi temsil etmektedir. Fransız
+                mirasımıza sadık kalarak genel merkezimiz şirketin kurulduğu
+                Bourges'dadır. Yaratmayı asla bırakmıyoruz ve bu nedenle
+                portföyümüz rakipsizdir: şuruplar, meyve karışımları, soslar,
+                frappeler, likörler ve smoothie'ler dahil 6 çeşit, 150'den fazla
+                tat ve 19 farklı format. ShineSafely bir içecek çözümünden daha
+                fazlasıdır; bir yaşam biçimidir, asırlık uzmanlığımıza dayanan
+                bir deneyimdir, çevreye saygılı bir markadır. Bu, yalnızca en
+                iyi doğal malzemeleri en heyecan verici ve yaratıcı şekilde
+                kullanarak özgünlük ve insanları bir araya getirmekle ilgilidir.
               </p>
             </div>
 
@@ -25,7 +37,7 @@ Buradan yola çıkarak kendi felsefesini de; her yeniliğe açık, her zaman ö�
               <h6 className="text-uppercase fw-bold mb-4">Yardım</h6>
               <p>
                 <a href="/feedback" className="text-reset">
-                Gizlilik Sözleşmesi
+                  Gizlilik Sözleşmesi
                 </a>
               </p>
               <p>
@@ -44,7 +56,7 @@ Buradan yola çıkarak kendi felsefesini de; her yeniliğe açık, her zaman ö�
       >
         © 2022 Copyright:
         <a className="text-reset fw-bold" href="/">
-          Art-in Systems
+          ShineSafely
         </a>
       </div>
     </footer>
