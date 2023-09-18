@@ -12,7 +12,7 @@ const Meta = ({title, description, keywords}) => {
 }
 
 Meta.defaultProps = {
-    title: 'Artin-Systems',
+    title: 'ShineSafely',
     description: 'lolerm',
     keywords: 'surup, ilaç'
 }
